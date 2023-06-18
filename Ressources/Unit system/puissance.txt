@@ -1,0 +1,18 @@
+{
+    "name": "puissance",
+    "base": "W",
+    "conversions": {
+        "W": "q",
+        "hp": "745.7*q",
+        "va": "q"
+    },
+    "alias": {
+        "W": "W",
+        "w": "W",
+        "watt": "W",
+        "hp": "hp",
+        "cheval-vapeur": "hp",
+        "va": "va",
+        "voltampere": "va"
+    }
+}

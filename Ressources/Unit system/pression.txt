@@ -1,0 +1,24 @@
+{
+    "name": "pression",
+    "base": "Pa",
+    "conversions": {
+        "pa": "q",
+        "atm": "101325*q",
+        "bar": "100000*q",
+        "psi": "6894.76*q",
+        "mmHg": "133.322*q"
+    },
+    "alias": {
+        "pa": "pa",
+        "Pa": "pa",
+        "pascal": "pa",
+        "atm": "atm",
+        "atmosphere": "atm",
+        "bar": "bar",
+        "psi": "psi",
+        "mmHg": "mmHg",
+        "mmhg": "mmHg",
+        "mmHG": "mmHg",
+        "torr": "mmHg"
+    }
+}

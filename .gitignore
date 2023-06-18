@@ -1,0 +1,9 @@
+.ipynb_checkpoints/
+__pycache__
+marked_data
+models
+*.xlsx
+Unit system.ipynb
+ToolCategories - LDA.ipynb
+Detect unicodes.ipynb
+desktop.ini

@@ -1,0 +1,39 @@
+{
+    "name": "longeur",
+    "base": "m",
+    "conversions": {
+        "m": "q",
+        "in": "2.54*q/100",
+        "ft": "0.3048*q",
+	  "yd": "0.9144*q",
+	  "NM": "1852*q",
+	  "mi": "1609.344*q",
+	  "lea" : "4828.032*q"
+    },
+    "alias": {
+        "m": "m",
+        "metre": "m",
+	  "Metre": "m",
+	  "in": "in",
+	  "pouce": "in",
+	  "Pouce": "in",
+	  "p": "in",
+	  "po": "in",
+	  "ft":"ft",
+	  "pied": "ft",
+	  "Pied": "ft",
+	  "P": "ft",
+	  "pi": "ft",
+	  "yd":"yd",
+	  "yard":"yd",
+	  "NM":"NM",
+	  "mille marin":"NM",
+	  "Mille marin":"NM",
+	  "mi": "mi",
+	  "mile":"mi",
+	  "Mile":"mi",
+	  "lea":"lea",
+	  "lieue":"lea",
+	  "Lieue":"lea"
+    }
+}

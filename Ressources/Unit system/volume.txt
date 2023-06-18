@@ -1,0 +1,19 @@
+{
+    "name": "volume",
+    "base": "m3",
+    "conversions": {
+        "m3": "q",
+        "litre": "q/1000",
+        "gal": "3.785*q/1000",
+	  "floz": "0.03/1000"
+    },
+    "alias": {
+        "litre": "litre",
+        "L": "litre",
+	  "l": "litre",
+        "gal": "gal",
+	  "gallon": "gal",
+	  "floz": "floz",
+        "fl oz": "floz"
+    }
+}

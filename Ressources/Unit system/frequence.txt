@@ -1,0 +1,12 @@
+{
+    "name": "frequence",
+    "base": "hz",
+    "conversions": {
+        "hz": "q"
+    },
+    "alias": {
+        "hz": "hz",
+        "hertz": "hz",
+        "Hz": "hz"
+    }
+}

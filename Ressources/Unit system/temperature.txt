@@ -1,0 +1,28 @@
+{
+    "name": "temperature",
+    "base": "K",
+    "conversions": {
+        "K": "q",
+        "F": "(q-32)/1.8+273.15",
+        "C": "q+273.15"
+    },
+    "alias": {
+        "K": "K",
+        "degK": "K",
+        "deg K": "K",
+        "kelvin": "K",
+        "degre kelvin": "K",
+        "degre Kelvin": "K",
+        "C": "C",
+        "degC": "C",
+        "deg C": "C",
+        "degre celsius": "C",        
+        "degre Celsius": "C",
+	  "F": "F",
+        "degF": "F",
+        "deg F": "F",
+        "farenheit": "F",
+        "degre farenheit": "F",
+        "degre Farenheit": "F"
+    }
+}

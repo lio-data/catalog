@@ -1,0 +1,31 @@
+{
+    "name": "masse",
+    "base": "kg",
+    "conversions": {
+        "kilo": "q",
+        "g": "q/1000",
+        "lb": "0.45359237*q",
+	  "q": "100*q",
+	  "cwt": "50.80234544*q",
+	  "t": "1000*q",
+	  "ct" : "0.0002*q",
+        "oz": "0.02835*q"
+    },
+    "alias": {
+        "kilo": "kilo",
+        "KG": "kilo",
+        "g":"g",
+	  "gramme": "g",
+        "lb":"lb",
+        "livre":"lb",
+        "q":"q",
+        "quintal":"q",
+        "cwt":"cwt",
+        "t":"t",
+        "tonne":"t",
+        "ct":"ct",
+        "carat":"ct",
+        "oz":"oz",
+        "once":"oz"
+    }
+}

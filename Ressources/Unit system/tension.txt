@@ -1,0 +1,15 @@
+{
+    "name": "tension",
+    "base": "V",
+    "conversions": {
+        "V": "q"
+    },
+    "alias": {
+        "V": "V",
+        "v": "V",
+	  "V~": "V",
+        "v~": "V",
+	  "volt": "V",
+	  "volt~": "V"
+    }
+}

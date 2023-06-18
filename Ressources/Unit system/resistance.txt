@@ -1,0 +1,11 @@
+{
+    "name": "resistance",
+    "base": "ohm",
+    "conversions": {
+        "ohm": "q"
+    },
+    "alias": {
+        "ohm": "ohm",
+        "O": "ohm"
+    }
+}

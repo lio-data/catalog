@@ -1,0 +1,27 @@
+{
+    "name": "longueur",
+    "base": "m",
+    "conversions": {
+        "m": "q",
+        "in": "2.54*q/100",
+        "ft": "0.3048*q",
+	  "yd": "0.9144*q",
+	  "NM": "1852*q",
+	  "mi": "1609.344*q",
+	  "lea" : "4828.032*q"
+    },
+    "alias": {
+        "metre": "m",
+	  "pouce": "in",
+	  "inch": "in",
+	  "p": "in",
+	  "po": "in",
+	  "pied": "ft",
+	  "P": "ft",
+	  "pi": "ft",
+	  "yard":"yd",
+	  "mille marin":"NM",
+	  "mile":"mi",
+	  "lieue":"lea"
+    }
+}

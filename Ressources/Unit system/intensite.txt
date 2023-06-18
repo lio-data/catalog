@@ -1,0 +1,12 @@
+{
+    "name": "intensite",
+    "base": "A",
+    "conversions": {
+        "A": "q"
+    },
+    "alias": {
+        "A": "A",
+        "amp": "A",
+        "ampere": "A"
+    }
+}

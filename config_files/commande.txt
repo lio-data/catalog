@@ -1,0 +1,3 @@
+python -m spacy train Entrainement_test\config2.cfg --output Entrainement_test\2905bis --paths.train marked_data\50.spacy --paths.dev marked_data\50.spacy --code import.py
+
+python -m spacy train Entrainement_test\config.cfg --output Entrainement_test\2905bis --code import.py

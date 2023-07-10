@@ -31,7 +31,7 @@ class CustomTokenizer(Tokenizer):
         print("Custom Tokenizer instantiated:",len(vocab),"words in vocab -", len(text_norm.special_chars),"special chars")
         super().__init__(vocab)
     def __call__(self, text):
-        text = text_norm.transform(text)
+        text = text_norm.transform(text + "\n")
         doc = super().__call__(text)
         doc._.brand = brand_detect.detect_brand(doc.text)[0]
         return doc
@@ -63,7 +63,7 @@ def preprocess_doc(doc):
     are grouped in a single token
     """
     for token in doc[:-1]:
-        if token.text=="\n" or (token.text=="." and doc[token.i+1].text!=": "):
+        if token.text=="\n" or (token.text=="." and doc[token.i+1].text!=": " and doc[token.i+1].text!="\n"):
             doc[token.i+1].is_sent_start = True
         else:
             doc[token.i+1].is_sent_start = False
@@ -219,18 +219,26 @@ class FalsePositiveUnit():
     def __call__(self, doc):
         """
         Remove tokens that were wrongly marked as units. Remove it frome ents and put
-        token._.is_unit to False
+        token._.is_unit to False.  Two criterias are used :
+        1) a unit in a sentence where there is no token whose like_num or _.is_cn is True.
+        2) a unit which is not marked as a noun and is a stopword
         """
+        ents = list(doc.ents)
         for s in doc.sents:
             i_min, i_max = s.start, s.end
             if any([t._.is_unit for t in s]) and not any([t._.is_cn or t.like_num for t in s]):
                 for t in s:
                     t._.is_unit = False
-                for e in doc.ents:
+                for e in list(doc.ents):
                     if e.start >= i_min and e.end <= i_max:
-                        ents = list(doc.ents)
                         ents.remove(e)
-                        doc.ents = ents
+        for e in list(ents):
+            if len(e)==1:
+                t = e[0]
+                if t._.is_unit and t.is_stop and t.pos_!="NOUN":
+                    t._.is_unit = False
+                    ents.remove(e)
+        doc.ents = ents
         return doc
 
 @Language.factory("false_positive_unit_cleaner")

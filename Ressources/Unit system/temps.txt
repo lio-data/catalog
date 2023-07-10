@@ -1,0 +1,27 @@
+{
+    "name": "temps",
+    "base": "seconde",
+    "conversions": {
+        "seconde": "q",
+        "minute": "q*60",
+        "heure" : "q*60*60",
+        "jour" : "q*60*60*24",
+	"mois" : "q*60*60*24*30",
+	"annee" : "q*60*60*24*365"
+    },
+    "alias": {
+        "seconde": "seconde",
+        "s": "seconde",
+        "sec": "seconde",
+        "minute": "minute",
+        "min": "minute",
+        "m": "minutes",
+        "heure": "heure",
+        "h": "heure",
+        "jour": "jour",
+        "j": "jour",
+        "mois": "mois",
+        "annee": "annee",
+        "an": "annee"
+    }
+}

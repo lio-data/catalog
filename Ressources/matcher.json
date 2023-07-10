@@ -1,0 +1,28 @@
+{
+  ":unit": {"desc": "sentence with a : followed by number and unit",
+    "rule": [[
+      {"IS_SENT_START": true}, {"IS_SENT_START": false, "OP": "{0,9}"}, {"LOWER": ":"},
+      {"OP": "?"}, {"LIKE_NUM": true}, {"_": {"is_unit": true}},  {"OP": "?"},{"TEXT": {"REGEX": "\\n"}}
+    ]]},
+  ":double unit": {"desc": "sentence with a : followed by 2xnumber and unit",
+    "rule": [[
+      {"IS_SENT_START": true}, {"IS_SENT_START": false, "OP": "{0,9}"}, {"LOWER": ":"},
+      {"OP": "?"}, {"LIKE_NUM": true}, {"_": {"is_unit": true}},  {"OP": "?"},
+      {"OP": "?"}, {"LIKE_NUM": true}, {"_": {"is_unit": true}},  {"OP": "?"}, {"TEXT": {"REGEX": "\\n"}}
+    ]]},
+  ":unit desc2": {"desc":"sentence with a unit predeeded by 'en' mentioned before : and the value after :",
+    "rule":[[
+      {"IS_SENT_START": true}, {"IS_SENT_START": false, "_": {"is_unit": false}, "OP": "{0,9}"}, {"LOWER": "en"}, {"_": {"is_unit": true}}, {"OP": "?"}, {"LOWER": ":"},
+      {"IS_SENT_START": false, "_": {"is_unit": false}, "OP": "{0,3}"},{"TEXT": {"REGEX": "\\n"}}
+    ]]},
+  ":unit desc": {"desc":"sentence with a unit predeeded surrounded by punctuation mentioned before : and the value after :",
+    "rule":[[
+      {"IS_SENT_START": true}, {"IS_SENT_START": false, "_": {"is_unit": false}, "OP": "{0,9}"}, {"IS_PUNCT": true}, {"_": {"is_unit": true}}, {"IS_PUNCT": true}, {"LOWER": ":"},
+      {"IS_SENT_START": false, "_": {"is_unit": false}, "OP": "{0,3}"}, {"TEXT": {"REGEX": "\\n"}}
+    ]]},
+  ":no unit": {"desc":"sentence without unit with :",
+    "rule":[[
+      {"IS_SENT_START": true}, {"IS_SENT_START": false, "_": {"is_unit": false}, "OP": "{0,9}"}, {"LOWER": ":"},
+      {"IS_SENT_START": false, "_": {"is_unit": false}, "OP": "{0,3}"}, {"TEXT": {"REGEX": "\\n"}}
+    ]]}
+}

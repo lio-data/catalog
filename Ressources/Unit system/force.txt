@@ -1,0 +1,19 @@
+{
+    "name": "force",
+    "base": "N",
+    "conversions": {
+        "N": "q",
+        "kgf" : "q/0.1097",
+        "lbf" : "q/0.22",
+        "dyn" : "q/100000"
+    },
+    "alias": {
+        "N": "N",
+        "kgf": "kgf",
+        "kilogramme-force": "kgf",
+        "lbf": "lbf",
+        "livre force": "lbf",
+        "dyn": "dyn",
+        "dyn": "dyne"
+    }
+}
